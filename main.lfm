@@ -1,0 +1,178 @@
+object Form1: TForm1
+  Left = 366
+  Height = 406
+  Top = 172
+  Width = 595
+  Caption = 'Form1'
+  ClientHeight = 386
+  ClientWidth = 595
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  OnPaint = FormPaint
+  LCLVersion = '1.2.2.0'
+  object Panel1: TPanel
+    Left = -1
+    Height = 408
+    Top = -1
+    Width = 408
+    Caption = 'Panel1'
+    Color = clBlack
+    ParentColor = False
+    TabOrder = 0
+    OnMouseDown = Panel1MouseDown
+    OnMouseUp = Panel1MouseUp
+  end
+  object BitBtn1: TBitBtn
+    Left = 426
+    Height = 30
+    Top = 8
+    Width = 153
+    Caption = 'Start'
+    OnClick = BitBtn1Click
+    TabOrder = 1
+  end
+  object BitBtn2: TBitBtn
+    Left = 426
+    Height = 30
+    Top = 40
+    Width = 153
+    Caption = 'Pause'
+    OnClick = BitBtn2Click
+    TabOrder = 2
+  end
+  object BitBtn3: TBitBtn
+    Left = 426
+    Height = 30
+    Top = 128
+    Width = 153
+    Caption = 'Zurücksetzen'
+    OnClick = BitBtn3Click
+    TabOrder = 3
+  end
+  object LabeledEdit1: TLabeledEdit
+    Left = 426
+    Height = 23
+    Top = 256
+    Width = 86
+    EditLabel.AnchorSideLeft.Control = LabeledEdit1
+    EditLabel.AnchorSideRight.Control = LabeledEdit1
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = LabeledEdit1
+    EditLabel.Left = 426
+    EditLabel.Height = 15
+    EditLabel.Top = 238
+    EditLabel.Width = 86
+    EditLabel.Caption = 'Rastergröße'
+    EditLabel.ParentColor = False
+    TabOrder = 4
+    Text = '10'
+  end
+  object GroupBox1: TGroupBox
+    Left = 416
+    Height = 65
+    Top = 336
+    Width = 168
+    Caption = 'Daten'
+    ClientHeight = 47
+    ClientWidth = 164
+    TabOrder = 5
+    object Label1: TLabel
+      Left = 16
+      Height = 15
+      Top = 8
+      Width = 34
+      Caption = 'Runde'
+      ParentColor = False
+    end
+  end
+  object LabeledEdit2: TLabeledEdit
+    Left = 424
+    Height = 23
+    Top = 192
+    Width = 56
+    EditLabel.AnchorSideLeft.Control = LabeledEdit2
+    EditLabel.AnchorSideRight.Control = LabeledEdit2
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = LabeledEdit2
+    EditLabel.Left = 424
+    EditLabel.Height = 15
+    EditLabel.Top = 174
+    EditLabel.Width = 56
+    EditLabel.Caption = 'Breite'
+    EditLabel.ParentColor = False
+    TabOrder = 6
+    Text = '40'
+  end
+  object LabeledEdit3: TLabeledEdit
+    Left = 504
+    Height = 23
+    Top = 192
+    Width = 56
+    EditLabel.AnchorSideLeft.Control = LabeledEdit3
+    EditLabel.AnchorSideRight.Control = LabeledEdit3
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = LabeledEdit3
+    EditLabel.Left = 504
+    EditLabel.Height = 15
+    EditLabel.Top = 174
+    EditLabel.Width = 56
+    EditLabel.Caption = 'Höhe'
+    EditLabel.ParentColor = False
+    TabOrder = 7
+    Text = '40'
+  end
+  object BitBtn4: TBitBtn
+    Left = 426
+    Height = 30
+    Top = 96
+    Width = 153
+    Caption = 'Zufällig'
+    OnClick = BitBtn4Click
+    TabOrder = 8
+  end
+  object TrackBar1: TTrackBar
+    Left = 416
+    Height = 25
+    Top = 297
+    Width = 168
+    Frequency = 100
+    Max = 2000
+    Min = 5
+    OnChange = TrackBar1Change
+    Position = 20
+    TabOrder = 9
+  end
+  object Label2: TLabel
+    Left = 480
+    Height = 15
+    Top = 320
+    Width = 34
+    Caption = 'Label2'
+    ParentColor = False
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = Timer1Timer
+    left = 8
+    top = 16
+  end
+  object MainMenu1: TMainMenu
+    left = 8
+    top = 72
+    object MenuItem1: TMenuItem
+      Caption = 'Programm'
+      object MenuItem4: TMenuItem
+        Caption = 'Beenden'
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Ansicht'
+      object MenuItem3: TMenuItem
+        Caption = 'Show Grid'
+        ShowAlwaysCheckable = True
+        OnClick = MenuItem3Click
+      end
+    end
+  end
+end
